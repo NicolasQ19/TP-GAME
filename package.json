@@ -1,0 +1,11 @@
+{
+  "name": "mi-juego-crossy",
+  "version": "1.0.0",
+  "description": "Un juego estilo Crossy Road hecho en Wollok.",
+  
+  
+  "main": "src/program.wlk",
+  
+  "author": "Tu Nombre",
+  "license": "ISC"
+}

@@ -1,0 +1,21 @@
+import wollok.game.*
+import personaje.*
+import elementoMovil.*
+import configTeclado.*
+import menu.*
+import nivel1.*
+
+
+program crossyWollok {
+ 
+    game.title("Crossy Wollok")
+    game.width(30)
+    game.height(18)
+    game.cellSize(20)
+
+    menu.iniciar()
+    
+
+    configTeclado.iniciar()
+    game.start()
+}
