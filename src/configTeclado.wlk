@@ -4,38 +4,11 @@ import menu.*
 
 object configTeclado {
 
-  var teclado = tecladoMenu
-
-  method iniciar() {
-    keyboard.p().onPressDo({ teclado.p() })
-    keyboard.w().onPressDo({ teclado.w() })
-    keyboard.s().onPressDo({ teclado.s() })
-    keyboard.a().onPressDo({ teclado.a() })
-    keyboard.d().onPressDo({ teclado.d() })
-    keyboard.n().onPressDo({ teclado.n() })
-    keyboard.m().onPressDo({ teclado.m() })
+  method configurarTeclas() {
+    	keyboard.w().onPressDo( {personaje.movimientoA((personaje.position().up(1)))})
+      keyboard.s().onPressDo( {personaje.movimientoA((personaje.position().down(1)))})
+      keyboard.a().onPressDo( {personaje.movimientoA((personaje.position().left(1)))})
+      keyboard.d().onPressDo( {personaje.movimientoA((personaje.position().right(1)))})
+      keyboard.p().onPressDo( { nivel1.iniciar()})
   }
-
-  method menuOn() { teclado = tecladoMenu }
-  method gameOn() { teclado = tecladoJuego }
-}
-
-object tecladoMenu {
-  method p() { nivel1.iniciar() }  // P → comenzar juego
-  method w() {}
-  method s() {}
-  method a() {}
-  method d() {}
-  method n() {} //seleccionar nivel
-  method m() {}
-}
-
-object tecladoJuego {
-  method w() { personaje.moverArriba() }
-  method s() { personaje.moverAbajo() }
-  method a() { personaje.moverIzquierda() }
-  method d() { personaje.moverDerecha() }
-  method p() {}
-  method n() {} 
-  method m() {menu.iniciar()}
 }

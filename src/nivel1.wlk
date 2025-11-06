@@ -5,19 +5,15 @@ import configTeclado.*
 object nivel1 {
     
     method iniciar(){
-        
-        game.clear() // Limpia el menú antes de empezar
-        
-        // Añadimos esta línea:
-        configTeclado.gameOn() // ¡IMPORTANTE! Activa el teclado del juego (W,A,S,D)
-        
+        game.clear()
+        configTeclado.configurarTeclas() 
         game.addVisual(personaje)
-        game.boardGround("pastoYCarretera.png")
-        // Sacamos la línea personaje.movimientos()
         
-        const auto1 = new Auto(position = game.at(0, 2), velocidad = 0.12, image = "Nivel1Celeste .png")
-        const auto2 = new Auto(position = game.at(0, 6), velocidad = 0.15, image = "Nivel1Celeste .png")
-        const auto3 = new Auto(position = game.at(0, 10), velocidad = 0.20, image = "Nivel1Celeste .png")
+        game.boardGround("carreteraPasto.png")
+        
+        const auto1 = new Auto(position = game.at(0, 1), velocidad = 0.11, image = "Nivel1Rojo.png")
+        const auto2 = new Auto(position = game.at(0, 5), velocidad = 0.13, image = "Nivel1Rojo.png")
+        const auto3 = new Auto(position = game.at(0, 9), velocidad = 0.20, image = "Nivel1Celeste .png")
 
         game.addVisual(auto1)
         game.addVisual(auto2)
@@ -36,4 +32,4 @@ object nivel1 {
             auto3.mover()
         })
     }
-}
+}   
