@@ -14,8 +14,6 @@ program crossyWollok {
     game.cellSize(20)
 
     menu.iniciar()
-    
-
     configTeclado.iniciar()
     game.start()
 }

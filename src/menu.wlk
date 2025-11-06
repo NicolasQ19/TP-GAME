@@ -11,7 +11,7 @@ object menu {
     new OnlyVisual(image = "play.png", position = game.at(5,5)).iniciar()
     
     // Activar modo menú en el teclado
-    configTeclado.menuOn()
+    configTeclado.menuOn() 
   }
 }
 
