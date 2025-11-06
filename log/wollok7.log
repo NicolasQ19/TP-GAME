@@ -422,3 +422,4 @@
 {"level":"info","message":"⌛ Validating src/menu.wlk","timeElapsed":173,"timestamp":"2025-11-06T01:39:27.798Z"}
 {"level":"info","message":"⌛ Validating src/menu.wlk","timeElapsed":112,"timestamp":"2025-11-06T01:39:35.588Z"}
 {"level":"info","message":"⌛ Validating src/menu.wlk","timeElapsed":111,"timestamp":"2025-11-06T01:39:35.771Z"}
+{"level":"info","message":"🚀 Program executed \u001b[3m\u001b[34msrc.program.crossyWollok\u001b[39m\u001b[23m on \u001b[3m\u001b[34mc:\\Users\\nquin\\Desktop\\TP GAME\\TP GAME\u001b[39m\u001b[23m","ok":true,"timeElapsed":476,"timestamp":"2025-11-06T01:39:54.699Z"}
