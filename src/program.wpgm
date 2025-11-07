@@ -5,12 +5,12 @@ import menu.*
 
 
 program crossyWollok {
- 
+    
     game.title("Crossy Wollok")
     game.width(18)
     game.height(12)
     game.cellSize(64)
-    game.boardGround("carreteraPasto.png")
+    game.boardGround("pastoYCarretera.png")
     menu.iniciar()
     game.start()
 }
