@@ -17,13 +17,16 @@ class Nivel1 inherits Nivel {
         game.addVisual(personaje)
         game.addVisual(bandera)
 
-        const auto1 = new Auto(position = game.at(0, 2), velocidad = 0.11, image = "bolaDeFuego.png")
-        const auto2 = new Auto(position = game.at(0, 6), velocidad = 0.13, image = "bolaDeFuego.png")
-        const auto3 = new Auto(position = game.at(0, 8), velocidad = 0.20, image = "bolaDeFuego.png")
-
+        const auto1 = new Auto(position = game.at(0, 2), velocidad = 0.11, image = "vinicius.png")
+        const auto2 = new Auto(position = game.at(8, 6), velocidad = 0.13, image = "neymar.png")
+        const auto3 = new Auto(position = game.at(3, 8), velocidad = 0.20, image = "mbappe.png")
+        const auto4 = new Auto(position = game.at(4, 4), velocidad = 0.15, image = "cristiano.png")
+        const auto5 = new Auto(position = game.at(0, 10), velocidad = 0.20, image = "mbappe.png")
         game.addVisual(auto1)
         game.addVisual(auto2)
         game.addVisual(auto3)
+        game.addVisual(auto4)
+
 
         game.whenCollideDo(personaje, { elemento =>
             if (elemento.esPeligroso() && personaje.position().distance(elemento.position()) < 1.0 ) {
@@ -31,7 +34,6 @@ class Nivel1 inherits Nivel {
                 derrota.iniciar()
                 game.removeVisual(personaje)
                 personaje.position(game.origin()) 
-                game.addVisual(personajeMuerto)
             }
         })
 
@@ -39,6 +41,7 @@ class Nivel1 inherits Nivel {
             auto1.mover()
             auto2.mover()
             auto3.mover()
+            auto4.mover()
         })
 
         game.whenCollideDo(personaje,{elemento => 
@@ -47,7 +50,6 @@ class Nivel1 inherits Nivel {
             victoria.iniciar()
             game.removeVisual(personaje)
             personaje.position(game.origin()) 
-            game.addVisual(personajeMuerto)
         }
         })
     }
@@ -80,7 +82,6 @@ class Nivel2 inherits Nivel {
                 derrota.iniciar()
                 game.removeVisual(personaje)
                 personaje.position(game.origin()) 
-                game.addVisual(personajeMuerto)
 
             }
         })
@@ -98,7 +99,6 @@ class Nivel2 inherits Nivel {
             victoria.iniciar()
             game.removeVisual(personaje)
             personaje.position(game.origin()) 
-            game.addVisual(personajeMuerto)
         }
         })
     }

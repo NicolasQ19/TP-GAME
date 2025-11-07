@@ -8,8 +8,8 @@ program crossyWollok {
     game.title("Crossy Wollok")  
     game.width(18)
     game.height(12)
-    game.cellSize(60)
-    game.boardGround("pastoYCarretera.png")
+    game.cellSize(50)
+    game.boardGround("cancha.png")
     menu.iniciar()
     game.start()
 }

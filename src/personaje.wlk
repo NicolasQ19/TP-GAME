@@ -2,7 +2,7 @@ import wollok.game.*
 
     object personaje {
         var property position = game.origin()
-        const property image = "esqueleto.png"
+        var property image = "messifrente.png"
 
         method movimientoA(nuevaPos){
             const x = nuevaPos.x()
@@ -13,13 +13,24 @@ import wollok.game.*
             }
     }
 
-        method ultimaPosicion() = game.at(position,position)
+    method cambiarImagenAFrente(){
+        image = "messifrente.png"
     }
 
-    object personajeMuerto {
-        var property position = personaje.ultimaPosicion()
-        const property image = "esqueleto.png"
+    method cambiarImagenAEspalda(){
+        image = "messiespalda.png"
     }
+
+    method cambiarImagenAIzquierda(){
+        image = "messiizquierdo.png"
+    }
+
+    method cambiarImagenADerecha(){
+        image= "messiderecho.png"
+    }
+
+    }
+
 
 
 
