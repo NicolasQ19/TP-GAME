@@ -2,12 +2,12 @@ import personaje.*
 import elementoMovil.*
 import menu.*
 import configTeclado.* 
+import banderaGanar.*
+
 
 class Nivel{
 
     method iniciar()
-
-
 }
 class Nivel1 inherits Nivel {
     
@@ -15,13 +15,11 @@ class Nivel1 inherits Nivel {
         game.clear()
         configTeclado.configurarTeclas() 
         game.addVisual(personaje)
-        
-        
-        game.boardGround("carreteraPasto.png")
-        
-        const auto1 = new Auto(position = game.at(0, 1), velocidad = 0.11, image = "Nivel1Rojo.png")
-        const auto2 = new Auto(position = game.at(0, 5), velocidad = 0.13, image = "Nivel1Rojo.png")
-        const auto3 = new Auto(position = game.at(0, 9), velocidad = 0.20, image = "Nivel1Celeste .png")
+        game.addVisual(bandera)
+
+        const auto1 = new Auto(position = game.at(0, 2), velocidad = 0.11, image = "bolaDeFuego.png")
+        const auto2 = new Auto(position = game.at(0, 6), velocidad = 0.13, image = "bolaDeFuego.png")
+        const auto3 = new Auto(position = game.at(0, 8), velocidad = 0.20, image = "bolaDeFuego.png")
 
         game.addVisual(auto1)
         game.addVisual(auto2)
@@ -43,6 +41,15 @@ class Nivel1 inherits Nivel {
             auto3.mover()
         })
 
+        game.whenCollideDo(personaje,{elemento => 
+        if(elemento.esBandera()){
+            game.say(personaje,"GANE")
+            victoria.iniciar()
+            game.removeVisual(personaje)
+            personaje.position(game.origin()) 
+            game.addVisual(personajeMuerto)
+        }
+        })
     }
 }   
 
@@ -52,7 +59,9 @@ class Nivel2 inherits Nivel {
         game.clear()
         configTeclado.configurarTeclas() 
         game.addVisual(personaje)
+        game.addVisual(bandera) 
         
+
         
         const auto1 = new Auto(position = game.at(0, 1), velocidad = 0.11, image = "Nivel1Rojo.png")
         const auto2 = new Auto(position = game.at(0, 3), velocidad = 0.13, image = "Nivel1Rojo.png")
@@ -83,23 +92,16 @@ class Nivel2 inherits Nivel {
 
         })
 
-        if (personaje.position().y() <= 0) {
-                game.say(personaje, "✅ ¡Llegaste a la meta!")
-                victoria.iniciar()
-                game.removeVisual(personaje)
-                personaje.position(game.origin()) 
-            }
-    }
-
-
-    method ganar(){
-            if (personaje.position().y() <= 0) {
-                game.say(personaje, "✅ ¡Llegaste a la meta!")
-                victoria.iniciar()
-                game.removeVisual(personaje)
-                personaje.position(game.origin()) 
-            }
+        game.whenCollideDo(personaje,{elemento => 
+        if(elemento.esBandera()){
+            game.say(personaje,"GANE")
+            victoria.iniciar()
+            game.removeVisual(personaje)
+            personaje.position(game.origin()) 
+            game.addVisual(personajeMuerto)
         }
+        })
+    }
 
 
     method ocultarNivel2(){
@@ -107,3 +109,7 @@ class Nivel2 inherits Nivel {
             game.removeVisual(self)
         }
 }   
+
+class Nivel3 inherits Nivel{
+    ///
+}

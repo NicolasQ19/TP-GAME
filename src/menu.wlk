@@ -7,8 +7,8 @@ object menu {
     const nivel1 = new Nivel1()
     const nivel2 = new Nivel2()
 
-  method iniciar() {
-
+    
+    method iniciar() {
     if(!game.hasVisual(pantallaMenu)) game.addVisual(pantallaMenu)
 
     //TECLA INICIAR NIVEL 1
@@ -38,14 +38,13 @@ object menu {
 
     method ocultarMenu() {
         if (game.hasVisual(pantallaMenu))
-            game.removeVisual(pantallaMenu)
+        game.removeVisual(pantallaMenu)
  	} 
 }
 
-
 object pantallaMenu {
-    const property image = "menugrande.png"
-    const property position = game.at(0, 0) 
+    const property image = "menugrande_1.png"
+    const property position = game.origin()
 }
 
 // MENÚ CONTROLES
@@ -88,7 +87,6 @@ object volverAlMenu {
 object victoria {
     method iniciar() {
         if (!game.hasVisual(pantallaVictoria)) game.addVisual(pantallaVictoria)
-
         volverAlMenu.volverAlMenuDesdePantallaFinal(pantallaVictoria)
     }
 }
@@ -113,4 +111,5 @@ object pantallaDerrota {
     // reiniciar, volver al menu, salir del juego
     method image() = "perdiste.png"
     method position() = game.at(5, 5)
+
 }

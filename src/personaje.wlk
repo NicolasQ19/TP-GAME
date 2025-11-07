@@ -4,9 +4,14 @@ import wollok.game.*
         var property position = game.origin()
         const property image = "esqueleto.png"
 
-        method movimientoA(unMovimiento){
-            position = unMovimiento
-        }
+        method movimientoA(nuevaPos){
+            const x = nuevaPos.x()
+            const y = nuevaPos.y()
+
+            if (x >= 0 && x < game.width() && y >= 0 && y < game.height()) {
+                position = nuevaPos
+            }
+    }
 
         method ultimaPosicion() = game.at(position,position)
     }
