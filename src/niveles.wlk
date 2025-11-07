@@ -7,6 +7,7 @@ class Nivel{
 
     method iniciar()
 
+
 }
 class Nivel1 inherits Nivel {
     
@@ -41,7 +42,7 @@ class Nivel1 inherits Nivel {
             auto2.mover()
             auto3.mover()
         })
-        
+
     }
 }   
 
@@ -82,13 +83,23 @@ class Nivel2 inherits Nivel {
 
         })
 
-        keyboard.b().onPressDo({ 
-            if (game.hasVisual(self)){ 
-                self.ocultarNivel2()
-                menu.iniciar()
+        if (personaje.position().y() <= 0) {
+                game.say(personaje, "✅ ¡Llegaste a la meta!")
+                victoria.iniciar()
+                game.removeVisual(personaje)
+                personaje.position(game.origin()) 
             }
-        })
     }
+
+
+    method ganar(){
+            if (personaje.position().y() <= 0) {
+                game.say(personaje, "✅ ¡Llegaste a la meta!")
+                victoria.iniciar()
+                game.removeVisual(personaje)
+                personaje.position(game.origin()) 
+            }
+        }
 
 
     method ocultarNivel2(){
