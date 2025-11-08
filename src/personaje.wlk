@@ -1,7 +1,7 @@
 import wollok.game.*
 
     object personaje {
-        var property position = game.origin()
+        var property position = game.at(8, 0)
         var property image = "messifrente.png"
 
         method movimientoA(nuevaPos){
@@ -28,8 +28,7 @@ import wollok.game.*
     method cambiarImagenADerecha(){
         image= "messiderecho.png"
     }
-
-    }
+}
 
 
 

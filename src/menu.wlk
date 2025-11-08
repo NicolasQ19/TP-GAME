@@ -13,7 +13,7 @@ object menu {
 
     //TECLA INICIAR NIVEL 1
     keyboard.num1().onPressDo({ 
-      if (game.hasVisual(pantallaMenu)){ 
+    if (game.hasVisual(pantallaMenu)){ 
         self.ocultarMenu()
         nivel1.iniciar()
         }
@@ -35,11 +35,10 @@ object menu {
         })
 }
 
-
     method ocultarMenu() {
         if (game.hasVisual(pantallaMenu))
         game.removeVisual(pantallaMenu)
- 	} 
+    } 
 }
 
 object pantallaMenu {
@@ -66,7 +65,7 @@ object controles {
 
 // VISUAL DE CONTROLES
 object pantallaControles {
-    const property image = "controles.png"
+    const property image = "controles_1152-768.png"
     const property position = game.at(0, 0) 
 }
 
@@ -96,12 +95,10 @@ object pantallaVictoria {
     method position() = game.at(5, 5)
 }
 
-
 // PANTALLA DERROTA
 object derrota {
     method iniciar() {
         if (!game.hasVisual(pantallaDerrota)) {game.addVisual(pantallaDerrota)}
-
         volverAlMenu.volverAlMenuDesdePantallaFinal(pantallaDerrota)
     }
 }

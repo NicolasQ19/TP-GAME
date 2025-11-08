@@ -1181,3 +1181,14 @@
 {"level":"info","message":"⌛ Building environment","timeElapsed":111,"timestamp":"2025-11-07T02:28:03.081Z"}
 {"level":"info","message":"⌛ Validating src/niveles.wlk","timeElapsed":124,"timestamp":"2025-11-07T02:28:03.207Z"}
 {"level":"info","message":"⌛ Validating src/niveles.wlk","timeElapsed":102,"timestamp":"2025-11-07T02:28:03.396Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":178,"timestamp":"2025-11-07T22:27:57.056Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":104,"timestamp":"2025-11-07T22:27:57.317Z"}
+{"level":"info","message":"⌛ Validating src/program.wpgm","timeElapsed":142,"timestamp":"2025-11-07T22:27:57.815Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":152,"timestamp":"2025-11-07T22:27:57.967Z"}
+{"level":"info","message":"⌛ Validating src/banderaGanar.wlk","timeElapsed":106,"timestamp":"2025-11-07T22:27:58.095Z"}
+{"level":"info","message":"⌛ Validating src/menu.wlk","timeElapsed":114,"timestamp":"2025-11-07T22:27:58.208Z"}
+{"level":"info","message":"⌛ Validating src/niveles.wlk","timeElapsed":107,"timestamp":"2025-11-07T22:27:58.315Z"}
+{"level":"info","message":"⌛ Validating src/elementoMovil.wlk","timeElapsed":102,"timestamp":"2025-11-07T22:27:58.641Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":135,"timestamp":"2025-11-07T22:28:00.403Z"}
+{"level":"info","message":"⌛ Validating src/program.wpgm","timeElapsed":116,"timestamp":"2025-11-07T22:28:00.519Z"}
+{"level":"info","message":"⌛ Validating src/personaje.wlk","timeElapsed":101,"timestamp":"2025-11-07T22:28:00.951Z"}
