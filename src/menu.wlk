@@ -65,7 +65,7 @@ object controles {
 
 // VISUAL DE CONTROLES
 object pantallaControles {
-    const property image = "controles_1152-768.png"
+    const property image = "controles.png"
     const property position = game.at(0, 0) 
 }
 

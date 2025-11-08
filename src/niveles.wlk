@@ -45,14 +45,6 @@ class Nivel1 inherits Nivel {
             enemy3.mover1()
             enemy4.mover2()
             enemy5.mover1()
-
-            // ✅ Chequeo de victoria dentro del onTick
-            if (personaje.position().y() >= game.height() - 1) {
-                //game.say(personaje, "✅ ¡Llegaste a la meta!")
-                victoria.iniciar()
-                game.removeVisual(personaje)
-                personaje.position(game.at(8, 0))
-            }
         })
 
         game.whenCollideDo(personaje,{elemento => 
@@ -75,9 +67,9 @@ class Nivel2 inherits Nivel {
         game.addVisual(bandera) 
         
 
-        const enemy1 = new Enemy(position = game.at(0, 1), velocidad = 0.11, image = "Nivel1Rojo.png")
-        const enemy2 = new Enemy(position = game.at(0, 3), velocidad = 0.13, image = "Nivel1Rojo.png")
-        const enemy3 = new Enemy(position = game.at(0, 5), velocidad = 0.20, image = "Nivel1Celeste .png")
+        const enemy1 = new Enemy(position = game.at(0, 1), velocidad = 0.11, image = "arbitro.png")
+        const enemy2 = new Enemy(position = game.at(0, 3), velocidad = 0.13, image = "cristiano.png")
+        const enemy3 = new Enemy(position = game.at(0, 5), velocidad = 0.20, image = "mbappe.png")
 
         game.addVisual(enemy1)
         game.addVisual(enemy2)
@@ -85,7 +77,7 @@ class Nivel2 inherits Nivel {
 
         game.whenCollideDo(personaje, { elemento =>
             if (elemento.esPeligroso() && personaje.position().distance(elemento.position()) < 1.0 ) {
-                game.say(personaje, "💥 ¡Me atropellaron!")
+                game.say(personaje, "💥 No se me da")
                 derrota.iniciar()
                 game.removeVisual(personaje)
                 personaje.position(game.origin()) 
@@ -93,10 +85,10 @@ class Nivel2 inherits Nivel {
             }
         })
 
-        game.onTick(75, "mover autos", {
-            enemy1.mover()
-            enemy2.mover()
-            enemy3.mover()
+        game.onTick(75, "mover enemigos", {
+            enemy1.mover1()
+            enemy2.mover2()
+            enemy3.mover2()
 
         })
 
